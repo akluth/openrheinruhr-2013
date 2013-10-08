@@ -1,8 +1,8 @@
 var SLIDE_CONFIG = {
   // Slide settings
   settings: {
-    title: 'Title Goes He',
-    subtitle: 'Subtitle Goes Here',
+    title: 'Roll out, roll back, roll in, roll weg',
+    subtitle: 'Deployment von Webanwendungen einfach und unkompliziert',
     //eventInfo: {
     //  title: 'Google I/O',
     //  date: '6/x/2013'
