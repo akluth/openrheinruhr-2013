@@ -1,22 +1,17 @@
 #!/bin/bash
 #
-# Starts a basic web server on the port specified.
-# 
-# ./serve.sh 3000 -> http://localhost:3000
+# Starts a basic web server on the port specified
+# and opens the presentation with the browser specified.
+#
+# ./serve.sh firefox 3000 -> http://localhost:3000 in Firefox
 #
 # Copyright 2012 Eric Bidelman <ebidel@gmail.com>
 
-port=$1
-if [ $#  -ne  1 ]
+port=8000
+browser=$1
+if [ $# -eq 2 ]
 then
-  port=8000
+  port=$2
 fi
 
-if [ $(uname -s) == "Darwin" ]
-then
-  open=open
-else
-  open=xdg-open
-fi
-
-$open http://localhost:$port/template.html && python -m SimpleHTTPServer $port;
+$1 http://localhost:$port/template.html && python -m http.server $port;
